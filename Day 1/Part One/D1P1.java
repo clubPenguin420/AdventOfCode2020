@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 public class D1P1{
     public static void main(String[] args) throws IOException {
-        File file = new File("Puzzle 1/Inputs.dat");
+        File file = new File("Part One/Inputs.adventofcodeinputs");
         Scanner inputs = new Scanner( file );
         ArrayList<Integer> nums = new ArrayList<>();
         while(inputs.hasNextLine()){
