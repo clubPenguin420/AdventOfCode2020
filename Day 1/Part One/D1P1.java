@@ -16,8 +16,7 @@ public class D1P1{
         return -1;
     }
     public static void main(String[] args) throws IOException {
-        File file = new File("Inputs.dat");
-        Scanner inputs = new Scanner( file );
+        Scanner inputs = new Scanner( new File("Inputs.dat") );
         ArrayList<Integer> nums = new ArrayList<>();
         while(inputs.hasNextLine()){
             int num = inputs.nextInt();

@@ -8,8 +8,7 @@ public class D2P2{
         return (password.charAt(firstLoc - 1) == letter.charAt(0) ^ password.charAt(secondLoc - 1) == letter.charAt(0));
     }
     public static void main(String[] args) throws IOException {
-        File inputFile = new File("Inputs.dat");
-        Scanner input = new Scanner(inputFile);
+        Scanner input = new Scanner(new File("Inputs.dat"));
         int numOfValidPasswords = 0;
         while(input.hasNext()){
             String[] parts = input.nextLine().replaceAll(":", "").replaceAll("-", " ").split(" ");
