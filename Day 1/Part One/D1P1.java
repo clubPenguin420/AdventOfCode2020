@@ -4,8 +4,19 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 public class D1P1{
+
+    public static long solve(ArrayList<Integer> nums){
+        for(int i = 0; i < nums.size(); i++){
+            for(int j = 0; j < nums.size(); j++){
+                if(nums.get(i) + nums.get(j) == 2020){
+                    return nums.get(i) * nums.get(j);
+                }
+            }
+        }
+        return -1;
+    }
     public static void main(String[] args) throws IOException {
-        File file = new File("Part One/Inputs.adventofcodeinputs");
+        File file = new File("Inputs.dat");
         Scanner inputs = new Scanner( file );
         ArrayList<Integer> nums = new ArrayList<>();
         while(inputs.hasNextLine()){
@@ -17,12 +28,8 @@ public class D1P1{
                 nums.add(num);
             }
         }
-        for(int i = 0; i < nums.size(); i++){
-            for(int j = 0; j < nums.size(); j++){
-                if(nums.get(i) + nums.get(j) == 2020){
-                    System.out.println(nums.get(i) * nums.get(j));
-                }
-            }
-        }
+
+        System.out.println(solve(nums));
+
     }
 }
