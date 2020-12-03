@@ -6,12 +6,10 @@ public class D3P2 {
 
     public static long trees(int right, int down, String[] map) {
         int numOfTrees = 0;
-        int x = 0;
-        for(int i = 0; i < map.length; i += down){
+        for(int i = 0, x = 0; i < map.length; i += down, x++){
             String line = map[i];
             // System.out.println(i + " - " + line.charAt((i * right) % 31));
             numOfTrees += (line.charAt((x * right) % 31) == '#') ? 1 : 0;
-            x++;
         }
         return numOfTrees;
     }
