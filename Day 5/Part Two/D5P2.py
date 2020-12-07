@@ -24,7 +24,7 @@ def solve(lines):
                 current_min = current_min + (((current_max - current_min) + 1) / 2)
         column_number = current_max
         seats.append(row_number * 8 + column_number)
-    
+
     return min(seat+1 for seat in seats if seat+1 not in seats and seat+2 in seats)
 
 
