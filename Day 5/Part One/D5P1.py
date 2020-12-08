@@ -10,17 +10,17 @@ def solve(lines):
         columns = line[7:]
         for i in rows:
             if(i == "F"):
-                current_max = current_max - (((current_max - current_min) + 1) / 2)
+                current_max -= (((current_max - current_min) + 1) / 2)
             elif(i == "B"):
-                current_min = current_min + (((current_max - current_min) + 1) / 2)
+                current_min += (((current_max - current_min) + 1) / 2)
         row_number = current_max
         current_max = 7
         current_min = 0
         for i in columns:
             if(i == "L"):
-                current_max = current_max - (((current_max - current_min) + 1) / 2)
+                current_max -= (((current_max - current_min) + 1) / 2)
             elif(i == "R"):
-                current_min = current_min + (((current_max - current_min) + 1) / 2)
+                current_min += (((current_max - current_min) + 1) / 2)
         column_number = current_max
         if(big_id >= row_number * 8 + column_number):
             continue
