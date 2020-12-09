@@ -1,6 +1,3 @@
-import re
-import math 
-
 def solve(lines):
     n = len(lines)
 

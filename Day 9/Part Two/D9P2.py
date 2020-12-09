@@ -1,6 +1,3 @@
-import re
-import math 
-
 def find_bad(lines):
     n = len(lines)
 
