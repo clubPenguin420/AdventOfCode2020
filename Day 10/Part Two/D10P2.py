@@ -4,8 +4,7 @@ def solve(lines):
     seen = {}
 
     def count(pos):
-        # print(seen)
-        if pos == x-1:
+        if pos == x - 1:
             return 1
 
         if pos in seen:
