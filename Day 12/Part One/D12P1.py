@@ -1,4 +1,4 @@
-def ang_to(ang):
+def shitty_version_of_google_maps(ang):
     if ang == 90:
         return -1, 0
     elif ang == 180:
@@ -12,7 +12,7 @@ def solve(lines):
     y = 0
     x = 0
     ang = 90
-    dirx, diry = ang_to(ang)
+    dirx, diry = shitty_version_of_google_maps(ang)
 
     for line in lines:
         act = line[0:1]
@@ -31,10 +31,10 @@ def solve(lines):
             y += value
         elif act == "L":
             ang = (ang - value + 360) % 360
-            dirx, diry = ang_to(ang)
+            dirx, diry = shitty_version_of_google_maps(ang)
         elif act == "R":
             ang = (ang + value + 360) % 360
-            dirx, diry = ang_to(ang)
+            dirx, diry = shitty_version_of_google_maps(ang)
     
     return abs(x) + abs(y)
 
