@@ -2,7 +2,6 @@ inputs = open("Inputs.dat", "r").read().strip().splitlines()
 card = int(inputs[0])
 door = int(inputs[1])
 
-
 transform = lambda val, sub_num: (val * sub_num) % 20201227
 def getLoopSize(target_num):
     val = 1
